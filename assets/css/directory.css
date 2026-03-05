@@ -15,6 +15,11 @@
 /* ─── Search bar ─────────────────────────────────────────────────────────── */
 .bmd-search-wrap {
     margin-bottom: 1.5em;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    max-width: 420px;
+    width: 100%;
 }
 
 .bmd-search {
@@ -23,6 +28,29 @@
     box-sizing: border-box;
     /* All other styles (border, padding, font, background, focus ring)
        are intentionally omitted — the theme's input styles will apply. */
+}
+
+.bmd-search-clear {
+    position: absolute;
+    right: 0.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    font-size: 1.2em;
+    background-color: transparent  !important;
+    color: red !important;         
+    min-width: 0;
+    min-height: 0;
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 5px;
+}
+
+.bmd-search-clear:hover {
+    background-color: white !important;
 }
 
 /* ─── Grid ───────────────────────────────────────────────────────────────── */
