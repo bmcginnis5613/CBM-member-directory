@@ -1,18 +1,3 @@
-/*
- * Boardroom Member Directory — Structural stylesheet.
- *
- * DESIGN PHILOSOPHY:
- * This file contains ONLY layout and structural rules. It intentionally sets
- * no colours, no font families, no font sizes, and no decorative shadows so
- * that every visual property is inherited from the active WordPress theme.
- *
- * The only exceptions are:
- *   1. The avatar circle (border-radius: 50%) — purely structural.
- *   2. display:none for hidden/search-filtered cards — functional, not visual.
- *   3. The search input box-sizing reset — prevents layout breakage.
- */
-
-/* ─── Search bar ─────────────────────────────────────────────────────────── */
 .bmd-search-wrap {
     margin-top: 2em;
     margin-bottom: 1.5em;
@@ -29,8 +14,6 @@
     width: 100%;
     max-width: 420px;
     box-sizing: border-box;
-    /* All other styles (border, padding, font, background, focus ring)
-       are intentionally omitted — the theme's input styles will apply. */
 }
 
 .bmd-search-clear {
@@ -56,7 +39,6 @@
     background-color: white !important;
 }
 
-/* ─── Grid ───────────────────────────────────────────────────────────────── */
 .bmd-grid {
     display: grid;
     gap: 1.5em;
@@ -80,22 +62,24 @@
     .bmd-grid--4col { grid-template-columns: 1fr; }
 }
 
-/* ─── Card ───────────────────────────────────────────────────────────────── */
 .bmd-card {
-    /* Padding only — colour, border, shadow come from the theme. */
     padding: 1.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Hidden cards (search filter) */
+.bmd-card:hover {
+    transform: translateY(-4px);
+}
+
 .bmd-card--hidden {
     display: none;
 }
 
-/* ─── Avatar ─────────────────────────────────────────────────────────────── */
 .bmd-card__avatar-wrap {
     margin-bottom: 0.75em;
 }
@@ -103,20 +87,19 @@
 .bmd-card__avatar {
     width: 80px;
     height: 80px;
-    border-radius: 50% !important;   /* structural: makes it a circle */
+    border-radius: 50% !important; 
     border: 3px solid #00b9e4 !important;
     object-fit: cover;
     display: block;
 }
 
-/* ─── Card body ──────────────────────────────────────────────────────────── */
 .bmd-card__body {
     width: 100%;
 }
 
 .bmd-card__name {
     margin: 0 0 0.2em;
-    color: #003478 !important;
+    color: #00b9e4 !important;
 }
 
 .bmd-card__name a {
@@ -128,11 +111,12 @@
 .bmd-card__linkedin-icon {
     display: inline-flex;
     align-items: center;
+    color: #0077B5;
     flex-shrink: 0;
 }
 
 .bmd-card__title {
-    margin: 0 0 0.75em;
+    margin: 0 0 0.3em;
 }
 
 .bmd-card__company,
@@ -141,13 +125,11 @@
     margin: 0 0 0.3em;
 }
 
-/* ─── Count ──────────────────────────────────────────────────────────────── */
 .bmd-count {
     margin-top: 1.5em;
-    text-align: right;
+    text-align: center;
 }
 
-/* ─── Empty / no-results states ─────────────────────────────────────────── */
 .bmd-empty,
 .bmd-no-results {
     padding: 3em 0;
@@ -163,7 +145,6 @@
     display: block;
 }
 
-/* ─── Profile form ───────────────────────────────────────────────────────── */
 .bmd-profile-form-wrap {
     max-width: 540px;
 }
@@ -180,5 +161,5 @@
 .bmd-field-group input {
     width: 100%;
     box-sizing: border-box;
-    /* Border, padding, font — all inherited from theme input styles. */
 }
+
