@@ -25,6 +25,17 @@ if ( ! defined( 'ABSPATH' ) ) exit;
         />
         <button class="bmd-search-clear" aria-label="<?php esc_attr_e( 'Clear search', 'boardroom-member-directory' ); ?>" hidden>&times;</button>
     </div>
+    <?php if ( ! empty( $members ) ) : ?>
+    <p class="bmd-count">
+        <?php
+        printf(
+            /* translators: %d: number of members */
+            esc_html( _n( '%d member', '%d members', count( $members ), 'boardroom-member-directory' ) ),
+            count( $members )
+        );
+        ?>
+    </p>
+    <?php endif; ?>
     <?php endif; ?>
 
     <?php if ( empty( $members ) ) : ?>
@@ -97,16 +108,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
         </div>
         <?php endforeach; ?>
     </div>
-
-    <p class="bmd-count">
-        <?php
-        printf(
-            /* translators: %d: number of members */
-            esc_html( _n( '%d member', '%d members', count( $members ), 'boardroom-member-directory' ) ),
-            count( $members )
-        );
-        ?>
-    </p>
 
     <?php endif; ?>
 
