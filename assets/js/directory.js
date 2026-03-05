@@ -1,9 +1,3 @@
-/**
- * Boardroom Member Directory — Frontend JS
- *
- * Lightweight, vanilla JS. No jQuery dependency.
- * Handles live client-side search/filter.
- */
 ( function () {
     'use strict';
 
