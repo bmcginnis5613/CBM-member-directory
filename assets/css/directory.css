@@ -103,7 +103,8 @@
 .bmd-card__avatar {
     width: 80px;
     height: 80px;
-    border-radius: 50%;   /* structural: makes it a circle */
+    border-radius: 50% !important;   /* structural: makes it a circle */
+    border: 3px solid #00b9e4 !important;
     object-fit: cover;
     display: block;
 }
@@ -115,6 +116,7 @@
 
 .bmd-card__name {
     margin: 0 0 0.2em;
+    color: #003478 !important;
 }
 
 .bmd-card__name a {
