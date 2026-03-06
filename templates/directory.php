@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
             type="search"
             class="bmd-search"
             autocomplete="off"
-            placeholder="<?php esc_attr_e( 'Search members by name, company, or industry…', 'boardroom-member-directory' ); ?>"
+            placeholder="<?php esc_attr_e( 'Search by name, company, or industry', 'boardroom-member-directory' ); ?>"
             aria-label="<?php esc_attr_e( 'Search members', 'boardroom-member-directory' ); ?>"
         />
         <button class="bmd-search-clear" aria-label="<?php esc_attr_e( 'Clear search', 'boardroom-member-directory' ); ?>" hidden>&times;</button>
