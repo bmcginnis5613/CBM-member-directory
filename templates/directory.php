@@ -1,6 +1,12 @@
 <?php
-/**
+**
  * Template: Directory grid
+ *
+ * Variables available (set in BMD_Shortcode::render):
+ *   $members      — array of WP_User objects
+ *   $columns      — int (2, 3, or 4)
+ *   $show_search  — bool
+ *   $atts         — full shortcode atts array
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
